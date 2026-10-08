@@ -205,7 +205,7 @@ jenkins --version
 Clone the project:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git clone https://github.com/tamilselvamV/Maven-with-Jenkins-main.git
 ```
 
 Move into the project:
@@ -337,13 +337,7 @@ Find your AWS EC2 public IP address.
 Then open:
 
 ```text
-http://YOUR-EC2-PUBLIC-IP:8081
-```
-
-Example:
-
-```text
-http://12.34.56.78:8081
+http://3.27.88.194:8081
 ```
 
 The application should now be available in your browser.
@@ -433,7 +427,7 @@ Git
 Enter your GitHub repository:
 
 ```text
-https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+https://github.com/tamilselvamV/Maven-with-Jenkins-main.git
 ```
 
 For a public repository:
