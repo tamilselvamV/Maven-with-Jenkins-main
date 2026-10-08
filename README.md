@@ -1,5 +1,8 @@
 # 🚀 Maven Java Web Application — CI/CD with Jenkins, Docker, Tomcat & AWS EC2
 
+<img width="2720" height="1864" alt="cicd_pipeline_flow" src="https://github.com/user-attachments/assets/639db51e-34f2-4186-bc5d-d347dc66bee5" />
+
+
 A complete DevOps CI/CD project for deploying a Maven-based Java web application using **GitHub, Jenkins, Maven, Docker, Apache Tomcat, and AWS EC2**.
 
 The main goal of this project is to automate the complete application delivery process — from pushing source code to GitHub to building, testing, containerizing, and deploying the application automatically.
