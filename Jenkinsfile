@@ -69,6 +69,34 @@ pipeline {
             }
         }
 
+        stage('AWS ECR Push') {
+    steps {
+        script {
+            def awsRegion = 'ap-southeast-2'
+            def awsAccountId = '556071985943'
+            def ecrRepo = 'regapp'
+
+            def ecrRegistry = "${awsAccountId}.dkr.ecr.${awsRegion}.amazonaws.com"
+            def ecrImage = "${ecrRegistry}/${ecrRepo}"
+
+            sh """
+                set -e
+
+                aws ecr get-login-password --region ${awsRegion} |
+                docker login --username AWS --password-stdin ${ecrRegistry}
+
+                docker tag ${IMAGE_NAME}:${BUILD_NUMBER} ${ecrImage}:${BUILD_NUMBER}
+                docker tag ${IMAGE_NAME}:latest ${ecrImage}:latest
+
+                docker push ${ecrImage}:${BUILD_NUMBER}
+                docker push ${ecrImage}:latest
+
+                docker logout ${ecrRegistry}
+            """
+        }
+    }
+}
+
         stage('Deploy') {
             steps {
                 sh '''
