@@ -8,7 +8,6 @@ A complete DevOps CI/CD project for deploying a Maven-based Java web application
 The main goal of this project is to automate the complete application delivery process — from pushing source code to GitHub to building, testing, containerizing, and deploying the application automatically.
 
 ----
-
 ## 📌 Project Overview
 
 This project demonstrates a practical CI/CD pipeline for a Java web application.
