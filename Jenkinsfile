@@ -38,6 +38,21 @@ pipeline {
             }
         }
 
+
+        stage('Trivy Security Scan') {
+    steps {
+        sh '''
+            set -e
+
+            trivy image \
+                --exit-code 1 \
+                --severity HIGH,CRITICAL \
+                --ignore-unfixed \
+                regapp:${BUILD_NUMBER}
+        '''
+    }
+}
+        
         stage('Docker Hub Push') {
             steps {
                 withCredentials([
