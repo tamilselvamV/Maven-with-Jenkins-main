@@ -14,6 +14,7 @@ This project demonstrates a practical CI/CD pipeline for a Java web application.
 
 Whenever a developer pushes code to the GitHub repository:
 
+
 ```text
 Developer
     ↓
